@@ -10,7 +10,7 @@ LINE Normal 16 -16 20 -12
 CIRCLE Normal 32 -16 0 -48
 TEXT 16 -32 Center 2 &
 SYMATTR Prefix X
-SYMATTR SpiceModel and
+SYMATTR SpiceModel and_op
 SYMATTR Description x&y: Convert the expressions to either side to Boolean, then AND.
 SYMATTR ModelFile LTspiceControlLibrary\Math.lib
 PIN 48 -32 NONE 8

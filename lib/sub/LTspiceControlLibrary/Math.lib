@@ -43,10 +43,10 @@ B1 v 0 V=atanh(V(x)) tripdt={tripdt} tripdv={tripdv}
 .param tripdt=1e300 tripdv=1
 .ends atanh
 
-.subckt buf v x
+.subckt buf_f v x
 B1 v 0 V=buf(V(x)) tripdt={tripdt}
 .param tripdt=1u
-.ends buf
+.ends buf_f
 
 .subckt ceil v x
 B1 v 0 V=ceil(V(x)) tripdt={tripdt} tripdv={tripdv}
@@ -132,10 +132,15 @@ B1 v 0 V=int(V(x)) tripdt={tripdt} tripdv={tripdv}
 .param tripdt=1e300 tripdv=1
 .ends int
 
-.subckt inv v x
+.subckt inv_f v x
 B1 v 0 V=inv(V(x)) tripdt={tripdt}
 .param tripdt=1u
-.ends inv
+.ends inv_f
+
+.subckt inv_op v x
+B1 v 0 V=inv(V(x)) tripdt={tripdt}
+.param tripdt=1u
+.ends inv_op
 
 .subckt limit v x
 B1 v 0 V=limit(V(x),y,z) tripdt={tripdt} tripdv={tripdv}
@@ -279,20 +284,20 @@ B1 v 0 V=modr(V(x),V(y)) tripdt={tripdt} tripdv={tripdv}
 
 * Operands built in arbitrary behavioral voltage
 
-.subckt and v x y
+.subckt and_op v x y
 B1 v 0 V=V(x)&V(y) tripdt={tripdt}
 .param tripdt=1u
-.ends and
+.ends and_op
 
-.subckt or v x y
+.subckt or_op v x y
 B1 v 0 V=V(x)|V(y) tripdt={tripdt}
 .param tripdt=1u
-.ends or
+.ends or_op
 
-.subckt xor v x y
+.subckt xor_op v x y
 B1 v 0 V=V(x)^V(y) tripdt={tripdt}
 .param tripdt=1u
-.ends xor
+.ends xor_op
 
 .subckt eq v x y
 B1 v 0 V=V(x)==V(y) tripdt={tripdt}

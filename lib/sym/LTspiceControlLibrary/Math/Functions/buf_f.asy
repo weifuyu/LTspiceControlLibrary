@@ -10,8 +10,8 @@ LINE Normal 48 -48 48 -16
 LINE Normal 0 -48 48 -48
 TEXT 24 -32 Center 2 buf
 SYMATTR Prefix X
-SYMATTR SpiceModel buf
-SYMATTR Description buf(x): 1 if x > .5, else 0.
+SYMATTR SpiceModel buf_f
+SYMATTR Description buf_f(x): 1 if x > .5, else 0.
 SYMATTR ModelFile LTspiceControlLibrary\Math.lib
 PIN 64 -32 NONE 8
 PINATTR PinName v

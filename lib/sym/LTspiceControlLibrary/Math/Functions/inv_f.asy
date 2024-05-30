@@ -10,7 +10,7 @@ LINE Normal 48 -48 48 -16
 LINE Normal 0 -48 48 -48
 TEXT 24 -32 Center 2 inv
 SYMATTR Prefix X
-SYMATTR SpiceModel inv
+SYMATTR SpiceModel inv_f
 SYMATTR Description inv(x): 0. if x > .5, else 1.
 SYMATTR ModelFile LTspiceControlLibrary\Math.lib
 PIN 64 -32 NONE 8

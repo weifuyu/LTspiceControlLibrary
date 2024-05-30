@@ -8,10 +8,10 @@ LINE Normal 16 -16 16 0
 LINE Normal 12 -12 16 -16
 LINE Normal 16 -16 20 -12
 CIRCLE Normal 32 -16 0 -48
-TEXT 16 -32 Center 2 ^
+TEXT 16 -32 Center 2 |
 SYMATTR Prefix X
-SYMATTR SpiceModel xor
-SYMATTR Description x^y: Convert the expressions to either side to Boolean, then XOR.
+SYMATTR SpiceModel or_op
+SYMATTR Description x|y: Convert the expressions to either side to Boolean, then OR.
 SYMATTR ModelFile LTspiceControlLibrary\Math.lib
 PIN 48 -32 NONE 8
 PINATTR PinName v
