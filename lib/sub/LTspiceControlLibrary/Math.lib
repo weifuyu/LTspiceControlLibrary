@@ -304,20 +304,20 @@ B1 v 0 V=V(x)!=V(y) tripdt={tripdt}
 .param tripdt=1u
 .ends neq
 
-.subckt nle v x y
+.subckt gt v x y
 B1 v 0 V=V(x)>V(y) tripdt={tripdt}
 .param tripdt=1u
-.ends nle
+.ends gt
 
 .subckt lt v x y
 B1 v 0 V=V(x)<V(y) tripdt={tripdt}
 .param tripdt=1u
 .ends lt
 
-.subckt nlt v x y
+.subckt ge v x y
 B1 v 0 V=V(x)>=V(y) tripdt={tripdt}
 .param tripdt=1u
-.ends nlt
+.ends ge
 
 .subckt le v x y
 B1 v 0 V=V(x)<=V(y) tripdt={tripdt}

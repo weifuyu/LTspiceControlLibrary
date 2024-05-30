@@ -90,8 +90,8 @@
 | mul | `x*y`: Floating point multiplication. |
 | neg | `-(x)`: Negative of x. |
 | neq | `x!=y`: True if preceding expression is not equal to succeeding expression, otherwise false. |
-| nle | `x>y`: True if expression on the left is greater than the expression on the right, otherwise false. |
-| nlt | `x>=y`: True if expression on the left is less than or equal the expression on the right, otherwise false. |
+| gt | `x>y`: True if expression on the left is greater than the expression on the right, otherwise false. |
+| ge | `x>=y`: True if expression on the left is less than or equal the expression on the right, otherwise false. |
 | or | `x\|y`: Convert the expressions to either side to Boolean, then OR. |
 | rcp | `1/(x)`: Reciprocal of x. |
 | sub | `x-y`: Floating point subtraction. |
