@@ -1,0 +1,13 @@
+ÿØÿÛ«symbol if
+  «type: X»
+  «description: if(x,y,z): If x > .5, then y else z.»
+  «library file: |.subckt if v x y z\nB1 v 0 V=if(V(x),V(y),V(z))\n.ends if»
+  «shorted pins: false»
+  «rect (-300,-400) (300,400) 0 0 0 0xff0000 0x4000000 -1 0 -1»
+  «text (-100,400) 1 6 2 0x1000000 -1 -1 "X1"»
+  «text (0,0) 1 0 0 0x1000000 -1 -1 "IF"»
+  «pin (300,0) (0,0) 1 15 0 0x0 -1 "v"»
+  «pin (0,-400) (20,0) 1 14 0 0x0 -1 "?"»
+  «pin (-300,200) (30,10) 1 7 0 0x0 -1 "1"»
+  «pin (-300,-200) (30,0) 1 7 0 0x0 -1 "0"»
+»

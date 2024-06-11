@@ -1,0 +1,15 @@
+ÿØÿÛ«symbol asinh
+  «type: X»
+  «description: Inverse hyperbolic sine»
+  «library file: |.subckt asinh v x\nB1 v 0 V=asinh(V(x))\n.ends asinh»
+  «shorted pins: false»
+  «line (-400,0) (-250,0) 0 0 0x1000000 -1 -1»
+  «line (-280,20) (-250,0) 0 0 0x1000000 -1 -1»
+  «line (-250,0) (-280,-20) 0 0 0x1000000 -1 -1»
+  «line (250,0) (400,0) 0 0 0x1000000 -1 -1»
+  «rect (-250,-150) (250,150) 0 0 0 0xff0000 0x4000000 -1 0 -1»
+  «text (-100,200) 1 6 2 0x1000000 -1 -1 "X1"»
+  «text (0,0) 1 0 0 0x1000000 -1 -1 "ASINH"»
+  «pin (400,0) (0,0) 1 15 0 0x0 -1 "v"»
+  «pin (-400,0) (0,0) 1 15 0 0x0 -1 "x"»
+»

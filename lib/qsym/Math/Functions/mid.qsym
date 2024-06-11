@@ -1,0 +1,13 @@
+ÿØÿÛ«symbol mid
+  «type: X»
+  «description: Mid value of x,y,z»
+  «library file: |.subckt mid v x y z\nB1 v 0 V=limit(V(x),V(y),V(z))\n.ends mid»
+  «shorted pins: false»
+  «rect (-300,-300) (300,300) 0 0 0 0xff0000 0x4000000 -1 0 -1»
+  «text (-100,300) 1 6 2 0x1000000 -1 -1 "X1"»
+  «text (50,0) 1 0 0 0x1000000 -1 -1 "MID"»
+  «pin (300,0) (0,0) 1 15 0 0x0 -1 "v"»
+  «pin (-300,200) (30,10) 1 7 0 0x0 -1 "x"»
+  «pin (-300,0) (20,20) 1 7 0 0x0 -1 "y"»
+  «pin (-300,-200) (30,10) 1 7 0 0x0 -1 "z"»
+»

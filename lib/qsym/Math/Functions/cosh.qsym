@@ -1,0 +1,15 @@
+ÿØÿÛ«symbol cosh
+  «type: X»
+  «description: Hyperbolic cosine»
+  «library file: |.subckt cosh v x\nB1 v 0 V=cosh(V(x))\n.ends cosh»
+  «shorted pins: false»
+  «line (-400,0) (-250,0) 0 0 0x1000000 -1 -1»
+  «line (250,0) (400,0) 0 0 0x1000000 -1 -1»
+  «line (-250,0) (-270,20) 0 0 0x1000000 -1 -1»
+  «line (-250,0) (-270,-20) 0 0 0x1000000 -1 -1»
+  «rect (-250,-150) (250,150) 0 0 0 0xff0000 0x4000000 -1 0 -1»
+  «text (-100,150) 1 6 2 0x1000000 -1 -1 "X1"»
+  «text (0,0) 1 0 0 0x1000000 -1 -1 "cosh"»
+  «pin (400,0) (0,0) 1 15 0 0x0 -1 "v"»
+  «pin (-400,0) (0,0) 1 15 0 0x0 -1 "x"»
+»

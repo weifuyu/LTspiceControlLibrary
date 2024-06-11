@@ -1,0 +1,15 @@
+ÿØÿÛ«symbol ddt
+  «type: X»
+  «description: Time derivitive of input»
+  «library file: |.subckt ddt v x\nB1 v 0 V=ddt(V(x))\n.ends ddt»
+  «shorted pins: false»
+  «line (-300,0) (-150,0) 0 0 0x1000000 -1 -1»
+  «line (150,0) (300,0) 0 0 0x1000000 -1 -1»
+  «line (-150,0) (-170,20) 0 0 0x1000000 -1 -1»
+  «line (-150,0) (-170,-20) 0 0 0x1000000 -1 -1»
+  «rect (-150,-150) (150,150) 0 0 0 0xff0000 0x4000000 -1 0 -1»
+  «text (-100,150) 1 6 2 0x1000000 -1 -1 "X1"»
+  «text (0,0) 1 0 0 0x1000000 -1 -1 "ddt"»
+  «pin (300,0) (0,0) 1 15 0 0x0 -1 "v"»
+  «pin (-300,0) (0,0) 1 15 0 0x0 -1 "x"»
+»

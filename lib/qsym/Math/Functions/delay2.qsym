@@ -1,0 +1,20 @@
+ÿØÿÛ«symbol delay2
+  «type: X»
+  «description: x delayed by t but store no more than tmax history»
+  «library file: |.subckt delay2 v x t\nB1 v 0 V=delay(V(x),V(t),tmax)\n.param tmax=1T\n.ends delay2»
+  «shorted pins: false»
+  «line (-400,0) (-250,0) 0 0 0x1000000 -1 -1»
+  «line (-250,0) (-270,20) 0 0 0x1000000 -1 -1»
+  «line (-250,0) (-270,-20) 0 0 0x1000000 -1 -1»
+  «line (-200,-300) (-200,-150) 0 0 0x1000000 -1 -1»
+  «line (-200,-150) (-220,-170) 0 0 0x1000000 -1 -1»
+  «line (-200,-150) (-180,-170) 0 0 0x1000000 -1 -1»
+  «line (350,0) (500,0) 0 0 0x1000000 -1 -1»
+  «rect (-250,-150) (350,150) 0 0 0 0xff0000 0x4000000 -1 0 -1»
+  «text (50,350) 1 0 2 0x1000000 -1 -1 "X1"»
+  «text (50,0) 1 0 0 0x1000000 -1 -1 "DELAY2"»
+  «text (100,250) 1 0 0 0x0 -1 -1 "tmax=1G"»
+  «pin (500,0) (20,0) 1 7 0 0x0 -1 "v"»
+  «pin (-400,0) (60,100) 1 11 0 0x0 -1 "x"»
+  «pin (-200,-300) (50,-60) 1 14 0 0x0 -1 "t"»
+»
