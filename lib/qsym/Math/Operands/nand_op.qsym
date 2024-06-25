@@ -1,0 +1,20 @@
+ÿØÿÛ«symbol nand_op
+  «type: X»
+  «description: x!&y: Convert the expressions to either side to Boolean, then NAND.»
+  «library file: |.subckt nand_op v x y\nB1 v 0 V=!(V(x)&V(y))\n.ends nand_op»
+  «shorted pins: false»
+  «line (-200,0) (-100,0) 0 0 0x1000000 -1 -1»
+  «line (-100,0) (-120,20) 0 0 0x1000000 -1 -1»
+  «line (-100,0) (-120,-20) 0 0 0x1000000 -1 -1»
+  «line (0,-200) (0,-100) 0 0 0x1000000 -1 -1»
+  «line (0,-100) (-20,-120) 0 0 0x1000000 -1 -1»
+  «line (0,-100) (20,-120) 0 0 0x1000000 -1 -1»
+  «line (100,0) (200,0) 0 0 0x1000000 -1 -1»
+  «ellipse (-100,100) (100,-100) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «text (-100,200) 1 0 2 0x1000000 -1 -1 "X1"»
+  «text (300,200) 1 0 2 0x1000000 -1 -1 "nand_op"»
+  «text (0,0) 1 0 1 0x1000000 -1 -1 "!&"»
+  «pin (200,0) (20,0) 1 15 0 0x0 -1 "v"»
+  «pin (-200,0) (-20,0) 1 15 0 0x0 -1 "x"»
+  «pin (0,-200) (0,0) 1 15 0 0x0 -1 "y"»
+»

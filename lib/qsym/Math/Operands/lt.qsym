@@ -1,0 +1,20 @@
+ÿØÿÛ«symbol lt
+  «type: X»
+  «description: x<y: True if expression on the left is less than the expression on the lower, otherwise false.»
+  «library file: |.subckt lt v x y\nB1 v 0 V=V(x)<V(y)\n.ends lt»
+  «shorted pins: false»
+  «line (-200,0) (-100,0) 0 0 0x1000000 -1 -1»
+  «line (-100,0) (-120,20) 0 0 0x1000000 -1 -1»
+  «line (-100,0) (-120,-20) 0 0 0x1000000 -1 -1»
+  «line (0,-200) (0,-100) 0 0 0x1000000 -1 -1»
+  «line (0,-100) (-20,-120) 0 0 0x1000000 -1 -1»
+  «line (0,-100) (20,-120) 0 0 0x1000000 -1 -1»
+  «line (100,0) (200,0) 0 0 0x1000000 -1 -1»
+  «ellipse (-100,100) (100,-100) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «text (-100,200) 1 0 2 0x1000000 -1 -1 "X1"»
+  «text (300,200) 1 0 2 0x1000000 -1 -1 "lt"»
+  «text (0,0) 1 0 1 0x1000000 -1 -1 "<"»
+  «pin (200,0) (20,0) 1 15 0 0x0 -1 "v"»
+  «pin (-200,0) (-20,0) 1 15 0 0x0 -1 "x"»
+  «pin (0,-200) (0,0) 1 15 0 0x0 -1 "y"»
+»

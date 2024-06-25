@@ -1,0 +1,16 @@
+ÿØÿÛ«symbol deadb
+  «type: X»
+  «description: Dead band, if `((min(y,z) < x) & (x < max(y,z)))`, then b else x. (default y=-z z=1 b=0)»
+  «library file: |.subckt deadb v x\nB1 v 0 V=deadb(V(x),y,z,b)\n.param y=-z z=1\n.param b=0\n.lib .\Math.inc\n.ends deadb»
+  «shorted pins: false»
+  «line (-400,0) (-250,0) 0 0 0x1000000 -1 -1»
+  «line (-250,0) (-270,20) 0 0 0x1000000 -1 -1»
+  «line (-250,0) (-270,-20) 0 0 0x1000000 -1 -1»
+  «line (250,0) (400,0) 0 0 0x1000000 -1 -1»
+  «rect (-250,-150) (250,150) 0 0 0 0xff0000 0x4000000 -1 0 -1»
+  «text (-100,150) 1 6 2 0x1000000 -1 -1 "X1"»
+  «text (0,0) 1 0 0 0x1000000 -1 -1 "DEADB"»
+  «text (50,-200) 1 0 0 0x0 -1 -1 "z=1 y=-z b=0"»
+  «pin (400,0) (0,0) 1 15 0 0x0 -1 "v"»
+  «pin (-400,0) (0,0) 1 15 0 0x0 -1 "x"»
+»
