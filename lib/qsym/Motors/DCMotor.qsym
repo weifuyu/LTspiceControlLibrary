@@ -1,0 +1,16 @@
+ÿØÿÛ«symbol DCMotor
+  «type: X»
+  «description: DC Motor. (default Ra=1 La=1m Ke=0.01 Kt=Ke Dm=10u Jm=10u)»
+  «library file: |.subckt DCMotor e+ e- m+ m-\nRe1 e+ Ne01 {Ra}\nLe1 Ne01 Ne02 {La} Rser=0\nHe1 Ne02 e- Lm1 {-Ke}\nRm1 m+ Nm01 {Dm}\nLm1 Nm01 Nm02 {Jm} Rser=0\nHm1 Nm02 m- Le1 {Kt}\n.param Ra=1 La=1m Ke=0.01 Dm=10u Jm=10u\n.param Kt=Ke\n.ends DCMotor»
+  «shorted pins: false»
+  «rect (-300,-300) (300,300) 0 0 0 0xff0000 0x4000000 -1 0 -1»
+  «text (-200,300) 1 6 0 0x1000000 -1 -1 "X1"»
+  «text (400,400) 1 0 2 0x1000000 -1 -1 "DCMOTOR"»
+  «text (0,0) 1 0 1 0x1000000 -1 -1 "DCM"»
+  «text (450,-400) 1 0 0 0x0 -1 -1 "Ra=1 La=1m Ke=0.01"»
+  «text (300,-600) 1 0 0 0x0 -1 -1 "Dm=10u Jm=10u"»
+  «pin (-300,200) (30,20) 1 7 0 0x0 -1 "e+"»
+  «pin (-300,-200) (30,20) 1 7 0 0x0 -1 "e-"»
+  «pin (300,200) (-30,10) 1 11 0 0x0 -1 "m+"»
+  «pin (300,-200) (-30,10) 1 11 0 0x0 -1 "m-"»
+»
