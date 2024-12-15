@@ -1,0 +1,18 @@
+ÿØÿÛ«symbol TriangleWaveVoltage
+  «type: X»
+  «description: Triangle wave voltage source. (default V1=-1 V2=1 Tdelay=0 Tperiod=1 tratio=0.5)»
+  «library file: |.subckt TriangleWaveVoltage n+ n-\nV1 n+ n- PULSE({V1} {V2} {Tdelay} {tratio*(Tperiod-Ton)} {(1-tratio)*(Tperiod-Ton)} {Ton} {Tperiod})\n.param V1=-1 V2=1 Tdelay=0 Tperiod=1 tratio=0.5 Ton=0.1m*Tperiod\n.ends TriangleWaveVoltage»
+  «shorted pins: false»
+  «line (-350,-50) (-250,150) 0 0 0x1000000 -1 -1»
+  «line (-250,150) (-150,-50) 0 0 0x1000000 -1 -1»
+  «line (-150,-50) (-50,150) 0 0 0x1000000 -1 -1»
+  «line (-50,150) (50,-50) 0 0 0x1000000 -1 -1»
+  «line (50,-50) (150,150) 0 0 0x1000000 -1 -1»
+  «line (150,150) (250,-50) 0 0 0x1000000 -1 -1»
+  «rect (-400,-300) (300,500) 0 0 0 0xff0000 0x4000000 -1 0 -1»
+  «text (-300,500) 1 6 0 0x1000000 -1 -1 "X1"»
+  «text (50,250) 1 0 2 0x1000000 -1 -1 "TRIANGLEWAVEVOLTAGE"»
+  «text (50,-400) 1 0 0 0x0 -1 -1 "V1=-1 V2=1 Tperiod=1 tratio=0.5"»
+  «pin (0,500) (0,0) 1 13 0 0x0 -1 "n+"»
+  «pin (0,-300) (0,0) 1 14 0 0x0 -1 "n-"»
+»

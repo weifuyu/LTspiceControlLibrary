@@ -1,0 +1,28 @@
+ÿØÿÛ«symbol 3PhaseWyeSinWaveVoltage
+  «type: X»
+  «description: Wye configuerd 3-phase sin wave voltage source. (default Voffset=0 Vamp=1 Freq=1 Td=0 Theta=0 Phi=0 Ncycles=0)»
+  «library file: |.subckt 3PhaseWyeSinWaveVoltage R S T N\nV1 R N SINE({Voffset} {Vamp} {Freq} {Td} {Theta} {Phi} {Ncycles})\nV2 S N SINE({Voffset} {Vamp} {Freq} {Td} {Theta} {Phi-120} {Ncycles})\nV3 T N SINE({Voffset} {Vamp} {Freq} {Td} {Theta} {Phi+120} {Ncycles})\n.param Voffset=0 Vamp=1 Freq=1 Td=0 Theta=0 Phi=0 Ncycles=0\n.ends 3PhaseWyeSinWaveVoltage»
+  «shorted pins: false»
+  «line (0,0) (0,100) 0 0 0x1000000 -1 -1»
+  «line (0,300) (0,400) 0 0 0x1000000 -1 -1»
+  «line (-400,-300) (-250,-200) 0 0 0x1000000 -1 -1»
+  «line (0,0) (-90,-80) 0 0 0x1000000 -1 -1»
+  «line (400,-300) (250,-200) 0 0 0x1000000 -1 -1»
+  «line (0,0) (90,-80) 0 0 0x1000000 -1 -1»
+  «ellipse (-100,300) (100,100) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «ellipse (-270,-40) (-70,-240) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «ellipse (270,-40) (70,-240) 0 0 0 0x1000000 0x1000000 -1 -1»
+  «arc3p (-80,200) (0,200) (-40,200) 0 0 0x1000000 -1 -1»
+  «arc3p (80,200) (0,200) (40,200) 0 0 0x1000000 -1 -1»
+  «arc3p (-250,-140) (-170,-140) (-210,-140) 0 0 0x1000000 -1 -1»
+  «arc3p (-90,-140) (-170,-140) (-130,-140) 0 0 0x1000000 -1 -1»
+  «arc3p (170,-140) (250,-140) (210,-140) 0 0 0x1000000 -1 -1»
+  «arc3p (170,-140) (90,-140) (130,-140) 0 0 0x1000000 -1 -1»
+  «text (-300,50) 1 6 0 0x1000000 -1 -1 "X1"»
+  «text (200,-450) 1 0 2 0x1000000 -1 -1 "3PHASEWYESINWAVEVOLTAGE"»
+  «text (700,50) 1 0 0 0x0 -1 -1 "Vamp=1 Freq=1"»
+  «pin (0,400) (-10,-10) 1 11 0 0x0 -1 "R"»
+  «pin (400,-300) (0,20) 1 14 0 0x0 -1 "S"»
+  «pin (-400,-300) (0,0) 1 14 0 0x0 -1 "T"»
+  «pin (0,0) (-20,0) 1 11 0 0x0 -1 "N"»
+»
