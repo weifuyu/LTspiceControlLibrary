@@ -1,0 +1,14 @@
+ÿØÿÛ«symbol PWM
+  «type: X»
+  «description: Pulse Width Modulation. (I)nput, (P)WM, (C)arrier, (default Vin1=0 Vin2=1 Tperiod=100u Tdelay=0 tratio=0.5)»
+  «library file: |.subckt PWM I P C\nX1 C 0 TriangleWaveVoltage V1={Vin1} V2={Vin2} Tdelay={Tdelay} Tperiod={Tperiod} tratio={tratio}\nB2 P 0 V=V(I)>=V(C) ic=0\n.param Vin1=0 Vin2=1 Tperiod=100u Tdelay=0 tratio=1\n.ends PWM\n.subckt TriangleWaveVoltage n+ n-\nV1 n+ n- PULSE({V1} {V2} {Tdelay} {tratio*(Tperiod-Ton)} {(1-tratio)*(Tperiod-Ton)} {Ton} {Tperiod+Ton})\n.param V1=-1 V2=1 Tdelay=0 Tperiod=1 tratio=0.5 Ton=0.1m*Tperiod Ncycles=0\n.ends TriangleWaveVoltage»
+  «shorted pins: false»
+  «rect (-400,-200) (400,200) 0 0 0 0xff0000 0x4000000 -1 0 -1»
+  «text (-100,200) 1 6 0 0x1000000 -1 -1 "X1"»
+  «text (0,0) 1 0 0 0x1000000 -1 -1 "PWM"»
+  «text (100,-250) 1 0 0 0x0 -1 -1 "Vin1=0 Vin2=1"»
+  «text (100,-400) 1 0 0 0x0 -1 -1 "Tperiod=100u tratio=0.5"»
+  «pin (-400,0) (30,10) 1 7 0 0x0 -1 "I"»
+  «pin (400,-100) (-30,30) 1 11 0 0x0 -1 "P"»
+  «pin (400,100) (-30,0) 1 11 0 0x0 -1 "C"»
+»

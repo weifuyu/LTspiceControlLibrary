@@ -1,0 +1,17 @@
+ÿØÿÛ«symbol RisingEdgeDetector
+  «type: X»
+  «description: Machine generated symbol for RISINGEDGEDETECTOR»
+  «library file: |.subckt RisingEdgeDetector I P\nÃ1 I 0 0 0 0 0 P1 0 BUF Td={Tedge}\nB1 P 0 V=buf(V(I))&inv(V(P1))\n.param Tedge=1u\n.ends RisingEdgeDetector»
+  «shorted pins: false»
+  «line (-50,-50) (0,-50) 0 0 0x1000000 -1 -1»
+  «line (0,-50) (0,50) 0 0 0x1000000 -1 -1»
+  «line (0,50) (50,50) 0 0 0x1000000 -1 -1»
+  «line (0,20) (-20,0) 0 0 0x1000000 -1 -1»
+  «line (0,20) (20,0) 0 0 0x1000000 -1 -1»
+  «rect (-100,-100) (100,100) 0 0 0 0xff0000 0x4000000 -1 0 -1»
+  «text (-100,100) 1 6 0 0x1000000 -1 -1 "X1"»
+  «text (0,350) 1 0 2 0x1000000 -1 -1 "RISINGEDGEDETECTOR"»
+  «text (50,-200) 1 0 0 0x0 -1 -1 "Tedge=1u"»
+  «pin (-100,0) (0,0) 1 15 0 0x0 -1 "I"»
+  «pin (100,0) (0,0) 1 15 0 0x0 -1 "P"»
+»

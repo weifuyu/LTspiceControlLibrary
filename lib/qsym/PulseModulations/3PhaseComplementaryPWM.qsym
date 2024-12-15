@@ -1,0 +1,20 @@
+ÿØÿÛ«symbol 3PhaseComplementaryPWM
+  «type: X»
+  «description: 3-Phase Complementary Pulse Width Modulation. (default Vin1=-1 Vin2=1 Tperiod=100u Tdead=1u Tdelay=0)»
+  «library file: |.subckt 3PhaseComplementaryPWM U V W up un vp vn wp wn\nX1 CN 0 TriangleWaveVoltage V1={Vin1} V2={Vin2-Vdead} Tperiod={Tperiod} tratio=0.5 Tdelay={Tdelay}\nV1 CP CN {Vdead}\nB1 up 0 V=V(U)>=V(CP)\nB2 un 0 V=V(U)<=V(CN)\nB3 vp 0 V=V(V)>=V(CP)\nB4 vn 0 V=V(V)<=V(CN)\nB5 wp 0 V=V(W)>=V(CP)\nB6 wn 0 V=V(W)<=V(CN)\n.param Vin1=-1 Vin2=1 Tperiod=100u Tdead=1u Tdelay=0\n.param Vdead=2*(Vin2-Vin1)/(Tperiod/Tdead+2)\n.ends 3PhaseComplementaryPWM\n.subckt TriangleWaveVoltage n+ n-\nV1 n+ n- PULSE({V1} {V2} {Tdelay} {tratio*(Tperiod-Ton)} {(1-tratio)*(Tperiod-Ton)} {Ton} {Tperiod})\n.param V1=-1 V2=1 Tdelay=0 Tperiod=1 tratio=0.5 Ton=0.1m*Tperiod\n.ends TriangleWaveVoltage»
+  «shorted pins: false»
+  «rect (-700,-800) (700,800) 0 0 0 0xff0000 0x4000000 -1 0 -1»
+  «text (0,883) 1 15 0 0x1000000 -1 -1 "X1"»
+  «text (-100,217) 1 15 2 0x1000000 -1 -1 "3PhaseComplementaryPWM"»
+  «text (-100,-900) 1 0 0 0x0 -1 -1 "Vin1=-1 Vin2=1 Tperiod=100u Tdead=1u"»
+  «text (0,0) 1 0 1 0x1000000 -1 -1 "3PhCompPWM"»
+  «pin (-700,400) (20,0) 1 7 0 0x0 -1 "U"»
+  «pin (-700,0) (20,0) 1 7 0 0x0 -1 "V"»
+  «pin (-700,-400) (20,0) 1 7 0 0x0 -1 "W"»
+  «pin (700,600) (-20,0) 1 11 0 0x0 -1 "up"»
+  «pin (700,400) (-20,0) 1 11 0 0x0 -1 "un"»
+  «pin (700,100) (-20,0) 1 11 0 0x0 -1 "vp"»
+  «pin (700,-100) (-20,0) 1 11 0 0x0 -1 "vn"»
+  «pin (700,-400) (-20,0) 1 11 0 0x0 -1 "wp"»
+  «pin (700,-600) (-20,0) 1 11 0 0x0 -1 "wn"»
+»
