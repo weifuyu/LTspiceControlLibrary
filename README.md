@@ -15,8 +15,8 @@ Installation
   This script works as below:
   * Search the installation directory of LTspice IV. (default: LTSPICE_DIR=C:\Program Files\LTC\LTspiceIV)  
     Search the personal directory of LTspice XVII. (default: LTSPICE_DIR=%USERPROFILE%\Documents\LTspiceXVII)
-  * Copy "LTspiceControlLibrary\lib\sub\LTspiceControlLibrary" to "%LTSPICE_DIR%\lib\sub\LTspiceControlLibrary".
-  * Copy "LTspiceControlLibrary\lib\sym\LTspiceControlLibrary" to "%LTSPICE_DIR%\lib\sym\LTspiceControlLibrary".
+  * Copy "LTspiceControlLibrary\lib\sub\" to "%LTSPICE_DIR%\lib\sub\".
+  * Copy "LTspiceControlLibrary\lib\sym\" to "%LTSPICE_DIR%\lib\sym\".
 4. Restart LTspice IV / XVII. The library should be now usable.
 5. Try examples in "LTspiceControlLibrary\examples" to confirm installation and learn how to use this library.
 
