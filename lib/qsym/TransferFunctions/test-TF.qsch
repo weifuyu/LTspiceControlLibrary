@@ -1,0 +1,337 @@
+ÿØÿÛ«schematic
+  «component (-1900,-100) 0 0
+    «symbol Vsin
+      «type: V»
+      «description: Independent Voltage Source»
+      «shorted pins: false»
+      «line (0,-130) (0,-200) 0 0 0x1000000 -1 -1»
+      «line (0,200) (0,130) 0 0 0x1000000 -1 -1»
+      «rect (-25,77) (25,73) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «rect (-2,50) (2,100) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «rect (-25,-73) (25,-77) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «ellipse (-130,130) (130,-130) 0 0 0 0x1000000 0x1000000 -1 -1»
+      «arc3p (0,0) (60,0) (30,0) 0 0 0x1000000 -1 -1»
+      «arc3p (0,0) (-60,0) (-30,0) 0 0 0x1000000 -1 -1»
+      «text (100,150) 1 7 0 0x1000000 -1 -1 "V1"»
+      «text (100,-150) 1 7 0 0x1000000 -1 -1 "SIN 0 1 50"»
+      «pin (0,200) (0,0) 1 0 0 0x0 -1 "+"»
+      «pin (0,-200) (0,0) 1 0 0 0x0 -1 "-"»
+    »
+  »
+  «component (-1900,-700) 0 0
+    «symbol Vsin
+      «type: V»
+      «description: Independent Voltage Source»
+      «shorted pins: false»
+      «line (0,-130) (0,-200) 0 0 0x1000000 -1 -1»
+      «line (0,200) (0,130) 0 0 0x1000000 -1 -1»
+      «rect (-25,77) (25,73) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «rect (-2,50) (2,100) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «rect (-25,-73) (25,-77) 0 0 0 0x1000000 0x3000000 -1 0 -1»
+      «ellipse (-130,130) (130,-130) 0 0 0 0x1000000 0x1000000 -1 -1»
+      «arc3p (0,0) (60,0) (30,0) 0 0 0x1000000 -1 -1»
+      «arc3p (0,0) (-60,0) (-30,0) 0 0 0x1000000 -1 -1»
+      «text (100,150) 1 7 0 0x1000000 -1 -1 "V2"»
+      «text (100,-150) 1 7 0 0x1000000 -1 -1 "SIN 0 0.3 500"»
+      «pin (0,200) (0,0) 1 0 0 0x0 -1 "+"»
+      «pin (0,-200) (0,0) 1 0 0 0x0 -1 "-"»
+    »
+  »
+  «component (100,1800) 0 0
+    «symbol 2ndOrderBandPassFilter
+      «type: X»
+      «description: K(2zws)/(s^2+2zws+w^2): 2nd order band pass filter element. (default K=1 w=1 z=1)»
+      «library file: |.subckt 2ndOrderBandPassFilter Y U\nE1 N001 0 U 0 1\nL1 N001 N002 {L1} Rser=0\nC1 N002 N003 {C1}\nR1 N003 0 {R1}\nE2 Y 0 N003 0 {Kg}\n.param Kg=1 w=1 z=1\n.param L1=1/w C1=1/w R1=2*z\n.ends 2ndOrderBandPassFilter»
+      «shorted pins: false»
+      «line (-800,0) (800,0) 0 0 0x1000000 -1 -1»
+      «line (-700,50) (-650,0) 0 0 0x1000000 -1 -1»
+      «line (-650,0) (-700,-50) 0 0 0x1000000 -1 -1»
+      «rect (-650,-250) (650,250) 0 0 0 0xff0000 0x4000000 -1 0 -1»
+      «text (-100,250) 1 6 2 0x1000000 -1 -1 "X3"»
+      «text (50,500) 1 0 2 0x1000000 -1 -1 "2NDORDERBANDPASSFILTER"»
+      «text (0,150) 1 0 1 0x1000000 -1 -1 "Kg(2zws)"»
+      «text (0,-100) 1 0 1 0x1000000 -1 -1 "s^2+2zws+w^2"»
+      «text (0,-350) 1 0 0 0x0 -1 -1 "Kg=1 w=500*2*pi z=0.2"»
+      «pin (800,0) (0,0) 1 15 0 0x0 -1 "Y"»
+      «pin (-800,0) (0,0) 1 15 0 0x0 -1 "U"»
+    »
+  »
+  «component (100,2600) 0 0
+    «symbol 2ndOrderBandStopFilter
+      «type: X»
+      «description: K(s^2+w^2)/(s^2+2zws+w^2): 2nd order band stop filter element. (default K=1 w=1 z=1)»
+      «library file: |.subckt 2ndOrderBandStopFilter Y U\nE1 N001 0 U 0 1\nR1 N001 N002 {R1}\nC1 N002 N003 {C1}\nL1 N003 0 {L1} Rser=0\nE2 Y 0 N002 0 {Kg}\n.param Kg=1 w=1 z=1\n.param L1=1/w C1=1/w R1=2*z\n.ends 2ndOrderBandStopFilter»
+      «shorted pins: false»
+      «line (-800,0) (800,0) 0 0 0x1000000 -1 -1»
+      «line (-700,50) (-650,0) 0 0 0x1000000 -1 -1»
+      «line (-650,0) (-700,-50) 0 0 0x1000000 -1 -1»
+      «rect (-650,-250) (650,250) 0 0 0 0xff0000 0x4000000 -1 0 -1»
+      «text (-100,200) 1 6 2 0x1000000 -1 -1 "X4"»
+      «text (50,500) 1 0 2 0x1000000 -1 -1 "2NDORDERBANDSTOPFILTER"»
+      «text (0,150) 1 0 1 0x1000000 -1 -1 "Kg(s^2+w^2)"»
+      «text (0,-100) 1 0 1 0x1000000 -1 -1 "s^2+2zws+w^2"»
+      «text (0,-350) 1 0 0 0x0 -1 -1 "Kg=1 w=500*2*pi z=0.2"»
+      «pin (800,0) (0,0) 1 15 0 0x0 -1 "Y"»
+      «pin (-800,0) (0,0) 1 15 0 0x0 -1 "U"»
+    »
+  »
+  «component (100,3400) 0 0
+    «symbol 2ndOrderHighPassFilter
+      «type: X»
+      «description: (Ks^2)/(s^2+2zws+w^2): 2nd order high pass filter element. (default K=1 w=1 z=1)»
+      «library file: |.subckt 2ndOrderHighPassFilter Y U\nE1 N001 0 U 0 1\nR1 N001 N002 {R1}\nC1 N002 N003 {C1}\nL1 N003 0 {L1} Rser=0\nE2 Y 0 N003 0 {Kg}\n.param Kg=1 w=1 z=1\n.param L1=1/w C1=1/w R1=2*z\n.ends 2ndOrderHighPassFilter»
+      «shorted pins: false»
+      «line (-800,0) (800,0) 0 0 0x1000000 -1 -1»
+      «line (-700,50) (-650,0) 0 0 0x1000000 -1 -1»
+      «line (-650,0) (-700,-50) 0 0 0x1000000 -1 -1»
+      «rect (-650,-200) (650,200) 0 0 0 0xff0000 0x4000000 -1 0 -1»
+      «text (50,200) 1 6 2 0x1000000 -1 -1 "X5"»
+      «text (0,450) 1 0 2 0x1000000 -1 -1 "2NDORDERHIGHPASSFILTER"»
+      «text (0,100) 1 0 1 0x1000000 -1 -1 "Kg*s^2"»
+      «text (0,-100) 1 0 1 0x1000000 -1 -1 "s^2+2zws+w^2"»
+      «text (0,-300) 1 0 0 0x0 -1 -1 "Kg=1 w=500*2*pi z=1"»
+      «pin (800,0) (0,0) 1 15 0 0x0 -1 "Y"»
+      «pin (-800,0) (0,0) 1 15 0 0x0 -1 "U"»
+    »
+  »
+  «component (100,4100) 0 0
+    «symbol 2ndOrderLag
+      «type: X»
+      «description: (Kw^2)/(s^2+2zws+w^2): 2nd order lag element. (default K=1 w=1 z=1)»
+      «library file: |.subckt 2ndOrderLag Y U\nE1 N001 0 U 0 1\nR1 N001 N002 {R1}\nL1 N002 N003 {L1} Rser=0\nC1 N003 0 {C1}\nE2 Y 0 N003 0 {Kg}\n.param Kg=1 w=1 z=1\n.param L1=1/w C1=1/w R1=2*z\n.ends 2ndOrderLag»
+      «shorted pins: false»
+      «line (-800,0) (800,0) 0 0 0x1000000 -1 -1»
+      «line (-650,0) (-700,50) 0 0 0x1000000 -1 -1»
+      «line (-650,0) (-700,-50) 0 0 0x1000000 -1 -1»
+      «rect (-650,-200) (650,200) 0 0 0 0xff0000 0x4000000 -1 0 -1»
+      «text (0,400) 1 6 2 0x1000000 -1 -1 "X6"»
+      «text (0,300) 1 0 2 0x1000000 -1 -1 "2NDORDERLAG"»
+      «text (0,-100) 1 0 1 0x1000000 -1 -1 "s^2+2zws+w^2"»
+      «text (0,100) 1 0 1 0x1000000 -1 -1 "Kg*w^2"»
+      «text (0,-300) 1 0 0 0x0 -1 -1 "Kg=1 w=500*2*pi z=1"»
+      «pin (800,0) (0,0) 1 15 0 0x0 -1 "Y"»
+      «pin (-800,0) (0,0) 1 15 0 0x0 -1 "U"»
+    »
+  »
+  «component (0,200) 0 0
+    «symbol 0thOrderHold
+      «type: X»
+      «description: (1-exp(-Ts))/(iTs): 0th order hold element. (default T=1 i=1 Y0=0)»
+      «library file: |.subckt 0thOrderHold Y U\nB1 Y 0 V=idt((V(U)-delay(V(U),T)),Y0*i*T)/(i*T)\n.param T=1 i=1 Y0=0\n.ends 0thOrderHold»
+      «shorted pins: false»
+      «line (-500,0) (500,0) 0 0 0x1000000 -1 -1»
+      «line (-450,50) (-400,0) 0 0 0x1000000 -1 -1»
+      «line (-400,0) (-450,-50) 0 0 0x1000000 -1 -1»
+      «rect (-400,-200) (400,200) 0 0 0 0xff0000 0x4000000 -1 0 -1»
+      «text (-100,150) 1 6 2 0x1000000 -1 -1 "X1"»
+      «text (0,400) 1 0 2 0x1000000 -1 -1 "0THORDERHOLD"»
+      «text (0,-300) 1 0 0 0x0 -1 -1 "T=1m i=1"»
+      «text (0,100) 1 0 1 0x1000000 -1 -1 "1-exp(-Ts)"»
+      «text (0,-80) 1 0 1 0x1000000 -1 -1 "iTs"»
+      «pin (500,0) (0,0) 1 15 0 0x0 -1 "Y"»
+      «pin (-500,0) (0,0) 1 15 0 0x0 -1 "U"»
+    »
+  »
+  «component (0,1000) 0 0
+    «symbol 1stOrderLag
+      «type: X»
+      «description: K/(1+Ts): 1st order lag element. (default K=1 T=1)»
+      «library file: |.subckt 1stOrderLag Y U\nE1 N001 0 U 0 1\nL1 N001 N002 {T} Rser=0\nR1 N002 0 1\nE2 Y 0 N002 0 {Kg}\n.param Kg=1 T=1\n.ends 1stOrderLag»
+      «shorted pins: false»
+      «line (-500,0) (500,0) 0 0 0x1000000 -1 -1»
+      «line (-350,0) (-400,50) 0 0 0x1000000 -1 -1»
+      «line (-350,0) (-400,-50) 0 0 0x1000000 -1 -1»
+      «rect (-350,-200) (350,200) 0 0 0 0xff0000 0x4000000 -1 0 -1»
+      «text (-100,200) 1 6 2 0x1000000 -1 -1 "X2"»
+      «text (0,400) 1 0 2 0x1000000 -1 -1 "1STORDERLAG"»
+      «text (0,-300) 1 0 0 0x0 -1 -1 "Kg=1 T=1m"»
+      «text (-50,100) 1 0 1 0x1000000 -1 -1 "Kg"»
+      «text (0,-100) 1 0 1 0x1000000 -1 -1 "1+Ts"»
+      «pin (500,0) (0,0) 1 15 0 0x0 -1 "Y"»
+      «pin (-500,0) (0,0) 1 15 0 0x0 -1 "U"»
+    »
+  »
+  «component (-200,4700) 0 0
+    «symbol DeadTime
+      «type: X»
+      «description: exp(-Ts): Dead time element. (default T=1)»
+      «library file: |.subckt DeadTime Y U\nB1 Y 0 V=delay(V(U),T)\n.param T=1\n.ends DeadTime»
+      «shorted pins: false»
+      «line (-500,0) (-350,0) 0 0 0x1000000 -1 -1»
+      «line (-350,0) (-400,50) 0 0 0x1000000 -1 -1»
+      «line (-350,0) (-400,-50) 0 0 0x1000000 -1 -1»
+      «line (350,0) (500,0) 0 0 0x1000000 -1 -1»
+      «rect (-350,-150) (350,150) 0 0 0 0xff0000 0x4000000 -1 0 -1»
+      «text (0,300) 1 6 2 0x1000000 -1 -1 "X7"»
+      «text (0,250) 1 0 2 0x1000000 -1 -1 "DEADTIME"»
+      «text (0,0) 1 0 1 0x1000000 -1 -1 "exp(-Ts)"»
+      «text (0,-250) 1 0 0 0x0 -1 -1 "T=5m"»
+      «pin (500,0) (0,0) 1 15 0 0x0 -1 "Y"»
+      «pin (-500,0) (0,0) 1 15 0 0x0 -1 "U"»
+    »
+  »
+  «component (-200,6000) 0 0
+    «symbol Integral
+      «type: X»
+      «description: 1/(Ts): Integral element. (default T=1 Y0=0)»
+      «library file: |.subckt Integral Y U\nG1 0 N001 U 0 1\nC1 N001 0 1\nR1 N001 N002 1 \nE1 N002 0 N001 0 1 \nE2 Y 0 N001 0 {1/T}\n.param T=1 Y0=0\n.ic V(N001)={Y0*T}\n.ends Integral»
+      «shorted pins: false»
+      «line (-300,0) (300,0) 0 0 0x1000000 -1 -1»
+      «line (-150,0) (-200,50) 0 0 0x1000000 -1 -1»
+      «line (-150,0) (-200,-50) 0 0 0x1000000 -1 -1»
+      «rect (-150,-200) (150,200) 0 0 0 0xff0000 0x4000000 -1 0 -1»
+      «text (-100,250) 1 6 2 0x1000000 -1 -1 "X8"»
+      «text (-50,500) 1 0 2 0x1000000 -1 -1 "INTEGRAL"»
+      «text (0,100) 1 0 1 0x1000000 -1 -1 "1"»
+      «text (0,-100) 1 0 1 0x1000000 -1 -1 "Ts"»
+      «text (0,-300) 1 0 0 0x0 -1 -1 "T=1"»
+      «pin (300,0) (0,0) 1 15 0 0x0 -1 "Y"»
+      «pin (-300,0) (0,0) 1 15 0 0x0 -1 "U"»
+    »
+  »
+  «component (-200,5400) 0 0
+    «symbol Derivative
+      «type: X»
+      «description: Ts: Derivative element.(default T=1)»
+      «library file: |.subckt Derivative Y U\nG1 0 N001 U 0 1\nL1 N001 0 {T} Rser=0\nE1 Y 0 N001 0 1\n.param T=1\n.ends Derivative»
+      «shorted pins: false»
+      «line (-200,0) (-100,0) 0 0 0x1000000 -1 -1»
+      «line (-150,50) (-100,0) 0 0 0x1000000 -1 -1»
+      «line (-100,0) (-150,-50) 0 0 0x1000000 -1 -1»
+      «line (100,0) (200,0) 0 0 0x1000000 -1 -1»
+      «rect (-100,-100) (100,100) 0 0 0 0xff0000 0x4000000 -1 0 -1»
+      «text (0,100) 1 6 2 0x1000000 -1 -1 "X9"»
+      «text (0,350) 1 0 2 0x1000000 -1 -1 "DERIVATIVE"»
+      «text (0,0) 1 0 1 0x1000000 -1 -1 "Ts"»
+      «text (0,-200) 1 0 0 0x0 -1 -1 "T=1"»
+      «pin (200,0) (0,0) 1 15 0 0x0 -1 "Y"»
+      «pin (-200,0) (0,0) 1 15 0 0x0 -1 "U"»
+    »
+  »
+  «component (-100,6800) 0 0
+    «symbol LaggedDerivative
+      «type: X»
+      «description: Ts/(1+iTs): Lagged derivative element. (default i=1 T=1)»
+      «library file: |.subckt LaggedDerivative Y U\nE1 N001 0 U 0 1\nR1 N001 N002 1\nL1 N002 0 {i*T} Rser=0\nE2 Y 0 N002 0 {1/i}\n.param i=1 T=1\n.ends LaggedDerivative»
+      «shorted pins: false»
+      «line (-400,0) (400,0) 0 0 0x1000000 -1 -1»
+      «line (-300,50) (-250,0) 0 0 0x1000000 -1 -1»
+      «line (-250,0) (-300,-50) 0 0 0x1000000 -1 -1»
+      «rect (-250,-200) (250,200) 0 0 0 0xff0000 0x4000000 -1 0 -1»
+      «text (-50,200) 1 6 2 0x1000000 -1 -1 "X10"»
+      «text (50,450) 1 0 2 0x1000000 -1 -1 "LAGGEDDERIVATIVE"»
+      «text (0,100) 1 0 1 0x1000000 -1 -1 "Ts"»
+      «text (0,-100) 1 0 1 0x1000000 -1 -1 "1+iTs"»
+      «text (0,-300) 1 0 0 0x0 -1 -1 "i=2 T=1"»
+      «pin (400,0) (0,0) 1 15 0 0x0 -1 "Y"»
+      «pin (-400,0) (0,0) 1 15 0 0x0 -1 "U"»
+    »
+  »
+  «component (-100,7700) 0 0
+    «symbol LimitedIntegral
+      «type: X»
+      «description: 1/(Ts): Integral element with internal limiter. (default T=1 Y0=0 Ymin=-1T Ymax=1T)»
+      «library file: |.subckt LimitedIntegral Y U\nB1 Y 0 V=idt(V(U),if(V(Y)>=Ymax,Ymax,if(V(Y)<=Ymin,Ymin,Y0))*T,((V(Y)>=Ymax)&(V(U)>0))|((V(Y)<=Ymin)&(V(U)<0)))/T\n.param T=1 Y0=0 Ymin=-1T Ymax=1T\n.ends LimitedIntegral»
+      «shorted pins: false»
+      «line (-300,0) (300,0) 0 0 0x1000000 -1 -1»
+      «line (-200,50) (-150,0) 0 0 0x1000000 -1 -1»
+      «line (-150,0) (-200,-50) 0 0 0x1000000 -1 -1»
+      «rect (-150,-200) (150,200) 0 0 0 0xff0000 0x4000000 -1 0 -1»
+      «text (-50,200) 1 6 2 0x1000000 -1 -1 "X11"»
+      «text (0,450) 1 0 2 0x1000000 -1 -1 "LIMITEDINTEGRAL"»
+      «text (0,100) 1 0 1 0x1000000 -1 -1 "1"»
+      «text (0,-100) 1 0 1 0x1000000 -1 -1 "Ts"»
+      «text (0,-300) 1 15 0 0x0 -1 -1 "T=1"»
+      «text (0,-450) 1 0 0 0x0 -1 -1 "Y0=0 Ymin=-2m Ymax=4m"»
+      «pin (300,0) (0,0) 1 15 0 0x0 -1 "Y"»
+      «pin (-300,0) (0,0) 1 15 0 0x0 -1 "U"»
+    »
+  »
+  «component (-100,8400) 0 0
+    «symbol Proportional
+      «type: X»
+      «description: g: Proportional element. (default g=1)»
+      «library file: |.subckt Proportional Y U\nE1 Y 0 U 0 {g}\n.param g=1\n.ends Proportional»
+      «shorted pins: false»
+      «line (-200,0) (-100,0) 0 0 0x1000000 -1 -1»
+      «line (-150,50) (-100,0) 0 0 0x1000000 -1 -1»
+      «line (-100,0) (-150,-50) 0 0 0x1000000 -1 -1»
+      «line (200,0) (100,0) 0 0 0x1000000 -1 -1»
+      «rect (-100,-100) (100,100) 0 0 0 0xff0000 0x4000000 -1 0 -1»
+      «text (-50,100) 1 6 2 0x1000000 -1 -1 "X12"»
+      «text (0,350) 1 0 2 0x1000000 -1 -1 "PROPORTIONAL"»
+      «text (0,0) 1 0 1 0x1000000 -1 -1 "g"»
+      «text (0,-180) 1 0 0 0x0 -1 -1 "g=1"»
+      «pin (200,0) (0,0) 1 15 0 0x0 -1 "Y"»
+      «pin (-200,0) (0,0) 1 15 0 0x0 -1 "U"»
+    »
+  »
+  «net (-1900,-1200) 1 13 0 "GND"»
+  «net (1200,200) 1 7 0 "0thOrderHold"»
+  «net (-1200,200) 1 14 0 "in"»
+  «net (1200,1000) 1 7 0 "1stOrderLag"»
+  «net (1200,1800) 1 7 0 "2ndOrderBandPassFilter"»
+  «net (1200,2600) 1 7 0 "2ndOrderBandStopFilter"»
+  «net (1200,3400) 1 7 0 "2ndOrderHighPassFilter"»
+  «net (1200,4100) 1 7 0 "2ndOrderLag"»
+  «net (1200,4700) 1 7 0 "DeadTime"»
+  «net (1200,6000) 1 7 0 "Integral"»
+  «net (1200,5400) 1 7 0 "Derivative"»
+  «net (1200,6800) 1 7 0 "LaggedDerivative"»
+  «net (1200,7700) 1 7 0 "LimitedIntegral"»
+  «net (1200,8400) 1 7 0 "Proportional"»
+  «junction (-1900,7700)»
+  «junction (-1900,6800)»
+  «junction (-1900,6000)»
+  «junction (-1900,5400)»
+  «junction (-1900,4700)»
+  «junction (-1900,4100)»
+  «junction (-1900,3400)»
+  «junction (-1900,2600)»
+  «junction (-1900,1800)»
+  «junction (-1900,1000)»
+  «junction (-1900,200)»
+  «wire (-1900,100) (-1900,200) "in"»
+  «wire (-1900,-500) (-1900,-300) "N01"»
+  «wire (500,200) (1200,200) "0thOrderHold"»
+  «wire (-1200,200) (-500,200) "in"»
+  «wire (-1900,200) (-1200,200) "in"»
+  «wire (-1900,200) (-1900,1000) "in"»
+  «wire (500,1000) (1200,1000) "1stOrderLag"»
+  «wire (-1900,1000) (-500,1000) "in"»
+  «wire (-1900,-1200) (-1900,-900) "GND"»
+  «wire (-1900,1000) (-1900,1800) "in"»
+  «wire (900,1800) (1200,1800) "2ndOrderBandPassFilter"»
+  «wire (-1900,1800) (-700,1800) "in"»
+  «wire (-1900,2600) (-700,2600) "in"»
+  «wire (900,2600) (1200,2600) "2ndOrderBandStopFilter"»
+  «wire (-1900,2600) (-1900,3400) "in"»
+  «wire (-1900,1800) (-1900,2600) "in"»
+  «wire (900,3400) (1200,3400) "2ndOrderHighPassFilter"»
+  «wire (-1900,3400) (-700,3400) "in"»
+  «wire (-1900,3400) (-1900,4100) "in"»
+  «wire (900,4100) (1200,4100) "2ndOrderLag"»
+  «wire (-1900,4100) (-700,4100) "in"»
+  «wire (-1900,4100) (-1900,4700) "in"»
+  «wire (300,4700) (1200,4700) "DeadTime"»
+  «wire (-1900,4700) (-700,4700) "in"»
+  «wire (-1900,5400) (-1900,6000) "in"»
+  «wire (100,6000) (1200,6000) "Integral"»
+  «wire (-1900,6000) (-500,6000) "in"»
+  «wire (0,5400) (1200,5400) "Derivative"»
+  «wire (-1900,4700) (-1900,5400) "in"»
+  «wire (-1900,5400) (-400,5400) "in"»
+  «wire (-1900,6000) (-1900,6800) "in"»
+  «wire (300,6800) (1200,6800) "LaggedDerivative"»
+  «wire (-1900,6800) (-500,6800) "in"»
+  «wire (-1900,6800) (-1900,7700) "in"»
+  «wire (200,7700) (1200,7700) "LimitedIntegral"»
+  «wire (-1900,7700) (-400,7700) "in"»
+  «wire (-1900,7700) (-1900,8400) "in"»
+  «wire (100,8400) (1200,8400) "Proportional"»
+  «wire (-1900,8400) (-300,8400) "in"»
+  «text (-450,-1250) 1 7 0 0x1000000 -1 -1 "ï»¿.tran 20m"»
+  «text (-300,-2150) 1 7 0 0x1000000 -1 -1 "ï»¿.plot V(in) V(0thOrderHold) V(1stOrderLag)\n.plot V(2ndOrderBandPassFilter) V(2ndOrderBandStopFilter)\n.plot V(2ndOrderHighPassFilter)\n.plot V(2ndOrderLag)\n.plot V(DeadTime)\n.plot V(Derivative)\n.plot V(Integral) V(LimitedIntegral)\n.plot V(in) V(LaggedDerivative) \n.plot V(Proportional)"»
+  «text (2550,6850) 1 7 1 0x1000000 -1 -1 "ï»¿Lagged Derivative, bit kind of high-pass filter\nhttps://taketake2.com/N25_en.html"»
+»
+

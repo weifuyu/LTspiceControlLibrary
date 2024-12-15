@@ -1,0 +1,17 @@
+ÿØÿÛ«symbol DeadTime
+  «type: X»
+  «description: exp(-Ts): Dead time element. (default T=1)»
+  «library file: |.subckt DeadTime Y U\nB1 Y 0 V=delay(V(U),T)\n.param T=1\n.ends DeadTime»
+  «shorted pins: false»
+  «line (-500,0) (-350,0) 0 0 0x1000000 -1 -1»
+  «line (-350,0) (-400,50) 0 0 0x1000000 -1 -1»
+  «line (-350,0) (-400,-50) 0 0 0x1000000 -1 -1»
+  «line (350,0) (500,0) 0 0 0x1000000 -1 -1»
+  «rect (-350,-150) (350,150) 0 0 0 0xff0000 0x4000000 -1 0 -1»
+  «text (0,300) 1 6 2 0x1000000 -1 -1 "X1"»
+  «text (0,250) 1 0 2 0x1000000 -1 -1 "DEADTIME"»
+  «text (0,0) 1 0 1 0x1000000 -1 -1 "exp(-Ts)"»
+  «text (0,-250) 1 0 0 0x0 -1 -1 "T=1"»
+  «pin (500,0) (0,0) 1 15 0 0x0 -1 "Y"»
+  «pin (-500,0) (0,0) 1 15 0 0x0 -1 "U"»
+»

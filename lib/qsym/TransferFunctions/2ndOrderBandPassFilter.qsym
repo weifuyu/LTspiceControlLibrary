@@ -1,0 +1,17 @@
+ÿØÿÛ«symbol 2ndOrderBandPassFilter
+  «type: X»
+  «description: K(2zws)/(s^2+2zws+w^2): 2nd order band pass filter element. (default K=1 w=1 z=1)»
+  «library file: |.subckt 2ndOrderBandPassFilter Y U\nE1 N001 0 U 0 1\nL1 N001 N002 {L1} Rser=0\nC1 N002 N003 {C1}\nR1 N003 0 {R1}\nE2 Y 0 N003 0 {Kg}\n.param Kg=1 w=1 z=1\n.param L1=1/w C1=1/w R1=2*z\n.ends 2ndOrderBandPassFilter»
+  «shorted pins: false»
+  «line (-800,0) (800,0) 0 0 0x1000000 -1 -1»
+  «line (-700,50) (-650,0) 0 0 0x1000000 -1 -1»
+  «line (-650,0) (-700,-50) 0 0 0x1000000 -1 -1»
+  «rect (-650,-250) (650,250) 0 0 0 0xff0000 0x4000000 -1 0 -1»
+  «text (-100,250) 1 6 2 0x1000000 -1 -1 "X1"»
+  «text (50,500) 1 0 2 0x1000000 -1 -1 "2NDORDERBANDPASSFILTER"»
+  «text (0,150) 1 0 1 0x1000000 -1 -1 "Kg(2zws)"»
+  «text (0,-100) 1 0 1 0x1000000 -1 -1 "s^2+2zws+w^2"»
+  «text (0,-350) 1 0 0 0x0 -1 -1 "Kg=1 w=1 z=1"»
+  «pin (800,0) (0,0) 1 15 0 0x0 -1 "Y"»
+  «pin (-800,0) (0,0) 1 15 0 0x0 -1 "U"»
+»

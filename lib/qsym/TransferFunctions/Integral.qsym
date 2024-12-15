@@ -1,0 +1,17 @@
+ÿØÿÛ«symbol Integral
+  «type: X»
+  «description: 1/(Ts): Integral element. (default T=1 Y0=0)»
+  «library file: |.subckt Integral Y U\nG1 0 N001 U 0 1\nC1 N001 0 1\nR1 N001 N002 1 \nE1 N002 0 N001 0 1 \nE2 Y 0 N001 0 {1/T}\n.param T=1 Y0=0\n.ic V(N001)={Y0*T}\n.ends Integral»
+  «shorted pins: false»
+  «line (-300,0) (300,0) 0 0 0x1000000 -1 -1»
+  «line (-150,0) (-200,50) 0 0 0x1000000 -1 -1»
+  «line (-150,0) (-200,-50) 0 0 0x1000000 -1 -1»
+  «rect (-150,-200) (150,200) 0 0 0 0xff0000 0x4000000 -1 0 -1»
+  «text (-100,250) 1 6 2 0x1000000 -1 -1 "X1"»
+  «text (-50,500) 1 0 2 0x1000000 -1 -1 "INTEGRAL"»
+  «text (0,100) 1 0 1 0x1000000 -1 -1 "1"»
+  «text (0,-100) 1 0 1 0x1000000 -1 -1 "Ts"»
+  «text (0,-300) 1 0 0 0x0 -1 -1 "T=1"»
+  «pin (300,0) (0,0) 1 15 0 0x0 -1 "Y"»
+  «pin (-300,0) (0,0) 1 15 0 0x0 -1 "U"»
+»

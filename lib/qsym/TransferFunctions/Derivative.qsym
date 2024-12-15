@@ -1,0 +1,17 @@
+ÿØÿÛ«symbol Derivative
+  «type: X»
+  «description: Ts: Derivative element.(default T=1)»
+  «library file: |.subckt Derivative Y U\nG1 0 N001 U 0 1\nL1 N001 0 {T} Rser=0\nE1 Y 0 N001 0 1\n.param T=1\n.ends Derivative»
+  «shorted pins: false»
+  «line (-200,0) (-100,0) 0 0 0x1000000 -1 -1»
+  «line (-150,50) (-100,0) 0 0 0x1000000 -1 -1»
+  «line (-100,0) (-150,-50) 0 0 0x1000000 -1 -1»
+  «line (100,0) (200,0) 0 0 0x1000000 -1 -1»
+  «rect (-100,-100) (100,100) 0 0 0 0xff0000 0x4000000 -1 0 -1»
+  «text (0,100) 1 6 2 0x1000000 -1 -1 "X1"»
+  «text (0,350) 1 0 2 0x1000000 -1 -1 "DERIVATIVE"»
+  «text (0,0) 1 0 1 0x1000000 -1 -1 "Ts"»
+  «text (0,-200) 1 0 0 0x0 -1 -1 "T=1"»
+  «pin (200,0) (0,0) 1 15 0 0x0 -1 "Y"»
+  «pin (-200,0) (0,0) 1 15 0 0x0 -1 "U"»
+»

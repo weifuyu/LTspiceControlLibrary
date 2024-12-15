@@ -1,0 +1,17 @@
+ÿØÿÛ«symbol 1stOrderLag
+  «type: X»
+  «description: K/(1+Ts): 1st order lag element. (default K=1 T=1)»
+  «library file: |.subckt 1stOrderLag Y U\nE1 N001 0 U 0 1\nL1 N001 N002 {T} Rser=0\nR1 N002 0 1\nE2 Y 0 N002 0 {Kg}\n.param Kg=1 T=1\n.ends 1stOrderLag»
+  «shorted pins: false»
+  «line (-500,0) (500,0) 0 0 0x1000000 -1 -1»
+  «line (-350,0) (-400,50) 0 0 0x1000000 -1 -1»
+  «line (-350,0) (-400,-50) 0 0 0x1000000 -1 -1»
+  «rect (-350,-200) (350,200) 0 0 0 0xff0000 0x4000000 -1 0 -1»
+  «text (-100,200) 1 6 2 0x1000000 -1 -1 "X1"»
+  «text (0,400) 1 0 2 0x1000000 -1 -1 "1STORDERLAG"»
+  «text (0,-300) 1 0 0 0x0 -1 -1 "Kg=1 T=1"»
+  «text (-50,100) 1 0 1 0x1000000 -1 -1 "Kg"»
+  «text (0,-100) 1 0 1 0x1000000 -1 -1 "1+Ts"»
+  «pin (500,0) (0,0) 1 15 0 0x0 -1 "Y"»
+  «pin (-500,0) (0,0) 1 15 0 0x0 -1 "U"»
+»

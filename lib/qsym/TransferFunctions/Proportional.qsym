@@ -1,0 +1,17 @@
+ÿØÿÛ«symbol Proportional
+  «type: X»
+  «description: g: Proportional element. (default g=1)»
+  «library file: |.subckt Proportional Y U\nE1 Y 0 U 0 {g}\n.param g=1\n.ends Proportional»
+  «shorted pins: false»
+  «line (-200,0) (-100,0) 0 0 0x1000000 -1 -1»
+  «line (-150,50) (-100,0) 0 0 0x1000000 -1 -1»
+  «line (-100,0) (-150,-50) 0 0 0x1000000 -1 -1»
+  «line (200,0) (100,0) 0 0 0x1000000 -1 -1»
+  «rect (-100,-100) (100,100) 0 0 0 0xff0000 0x4000000 -1 0 -1»
+  «text (-50,100) 1 6 2 0x1000000 -1 -1 "X1"»
+  «text (0,350) 1 0 2 0x1000000 -1 -1 "PROPORTIONAL"»
+  «text (0,0) 1 0 1 0x1000000 -1 -1 "g"»
+  «text (0,-180) 1 0 0 0x0 -1 -1 "g=1"»
+  «pin (200,0) (0,0) 1 15 0 0x0 -1 "Y"»
+  «pin (-200,0) (0,0) 1 15 0 0x0 -1 "U"»
+»

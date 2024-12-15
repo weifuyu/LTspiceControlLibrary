@@ -1,0 +1,17 @@
+ÿØÿÛ«symbol LaggedDerivative
+  «type: X»
+  «description: Ts/(1+iTs): Lagged derivative element. (default i=1 T=1)»
+  «library file: |.subckt LaggedDerivative Y U\nE1 N001 0 U 0 1\nR1 N001 N002 1\nL1 N002 0 {i*T} Rser=0\nE2 Y 0 N002 0 {1/i}\n.param i=1 T=1\n.ends LaggedDerivative»
+  «shorted pins: false»
+  «line (-400,0) (400,0) 0 0 0x1000000 -1 -1»
+  «line (-300,50) (-250,0) 0 0 0x1000000 -1 -1»
+  «line (-250,0) (-300,-50) 0 0 0x1000000 -1 -1»
+  «rect (-250,-200) (250,200) 0 0 0 0xff0000 0x4000000 -1 0 -1»
+  «text (-50,200) 1 6 2 0x1000000 -1 -1 "X1"»
+  «text (50,450) 1 0 2 0x1000000 -1 -1 "LAGGEDDERIVATIVE"»
+  «text (0,100) 1 0 1 0x1000000 -1 -1 "Ts"»
+  «text (0,-100) 1 0 1 0x1000000 -1 -1 "1+iTs"»
+  «text (0,-300) 1 0 0 0x0 -1 -1 "i=1 T=1"»
+  «pin (400,0) (0,0) 1 15 0 0x0 -1 "Y"»
+  «pin (-400,0) (0,0) 1 15 0 0x0 -1 "U"»
+»

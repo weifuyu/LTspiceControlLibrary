@@ -1,0 +1,18 @@
+ÿØÿÛ«symbol LimitedIntegral
+  «type: X»
+  «description: 1/(Ts): Integral element with internal limiter. (default T=1 Y0=0 Ymin=-1T Ymax=1T)»
+  «library file: |.subckt LimitedIntegral Y U\nB1 Y 0 V=idt(V(U),if(V(Y)>=Ymax,Ymax,if(V(Y)<=Ymin,Ymin,Y0))*T,((V(Y)>=Ymax)&(V(U)>0))|((V(Y)<=Ymin)&(V(U)<0)))/T\n.param T=1 Y0=0 Ymin=-1T Ymax=1T\n.ends LimitedIntegral»
+  «shorted pins: false»
+  «line (-300,0) (300,0) 0 0 0x1000000 -1 -1»
+  «line (-200,50) (-150,0) 0 0 0x1000000 -1 -1»
+  «line (-150,0) (-200,-50) 0 0 0x1000000 -1 -1»
+  «rect (-150,-200) (150,200) 0 0 0 0xff0000 0x4000000 -1 0 -1»
+  «text (-50,200) 1 6 2 0x1000000 -1 -1 "X1"»
+  «text (0,450) 1 0 2 0x1000000 -1 -1 "LIMITEDINTEGRAL"»
+  «text (0,100) 1 0 1 0x1000000 -1 -1 "1"»
+  «text (0,-100) 1 0 1 0x1000000 -1 -1 "Ts"»
+  «text (0,-300) 1 15 0 0x0 -1 -1 "T=1"»
+  «text (0,-450) 1 0 0 0x0 -1 -1 "Y0=0 Ymin=-1T Ymax=1T"»
+  «pin (300,0) (0,0) 1 15 0 0x0 -1 "Y"»
+  «pin (-300,0) (0,0) 1 15 0 0x0 -1 "U"»
+»
