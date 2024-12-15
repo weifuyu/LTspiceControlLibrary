@@ -788,6 +788,24 @@
       «pin (-400,0) (0,0) 1 15 0 0x0 -1 "x"»
     »
   »
+  «component (2100,-3700) 0 0
+    «symbol deadb
+      «type: X»
+      «description: Dead band, if `((min(y,z) < x) & (x < max(y,z)))`, then b else x. (default y=-z z=1 b=0)»
+      «library file: |.subckt deadb v x\nB1 v 0 V=deadb(V(x),y,z,b)\n.param y=-z z=1\n.param b=0\n.lib .\Math.inc\n.ends deadb»
+      «shorted pins: false»
+      «line (-400,0) (-250,0) 0 0 0x1000000 -1 -1»
+      «line (-250,0) (-270,20) 0 0 0x1000000 -1 -1»
+      «line (-250,0) (-270,-20) 0 0 0x1000000 -1 -1»
+      «line (250,0) (400,0) 0 0 0x1000000 -1 -1»
+      «rect (-250,-150) (250,150) 0 0 0 0xff0000 0x4000000 -1 0 -1»
+      «text (-100,150) 1 6 2 0x1000000 -1 -1 "X36"»
+      «text (0,0) 1 0 0 0x1000000 -1 -1 "DEADB"»
+      «text (50,-200) 1 0 0 0x0 -1 -1 "z=0.5 y=-z b=0"»
+      «pin (400,0) (0,0) 1 15 0 0x0 -1 "v"»
+      «pin (-400,0) (0,0) 1 15 0 0x0 -1 "x"»
+    »
+  »
   «net (-300,-3500) 1 13 0 "GND"»
   «net (-1200,-13800) 1 13 0 "GND"»
   «net (800,-1600) 1 7 0 "out1"»
@@ -831,6 +849,7 @@
   «net (1100,-11300) 1 7 0 "out_tanh"»
   «net (1100,-11700) 1 7 0 "out_uramp"»
   «net (1100,-12100) 1 7 0 "out_ustep"»
+  «net (2800,-3700) 1 7 0 "out_deadb"»
   «junction (2100,3900)»
   «junction (2100,2200)»
   «junction (2100,1700)»
@@ -855,6 +874,7 @@
   «junction (-1200,-1600)»
   «junction (-1200,-2000)»
   «junction (-1200,-2400)»
+  «junction (-1200,-3700)»
   «junction (-1200,-3900)»
   «junction (-1200,-4800)»
   «junction (-1200,-6200)»
@@ -874,7 +894,7 @@
   «wire (-1200,-1600) (-500,-1600) "in"»
   «wire (400,-2400) (800,-2400) "out2"»
   «wire (-500,-2400) (-1200,-2400) "in"»
-  «wire (-1200,-3900) (-1200,-2400) "in"»
+  «wire (-1200,-3700) (-1200,-2400) "in"»
   «wire (-400,1700) (-1200,1700) "in"»
   «wire (-1200,1000) (-1200,1700) "in"»
   «wire (-1200,-2000) (-1200,-1600) "in"»
@@ -1007,9 +1027,9 @@
   «wire (100,-12100) (-1200,-12100) "in"»
   «wire (-1200,-13200) (-1200,-12100) "in"»
   «wire (1100,-12100) (900,-12100) "out_ustep"»
-  «line (-2100,1250) (-1950,1250) 0 0 0x1000000 -1 -1»
-  «line (-1950,1250) (-1970,1270) 0 0 0x1000000 -1 -1»
-  «line (-1950,1250) (-1970,1230) 0 0 0x1000000 -1 -1»
+  «wire (1700,-3700) (-1200,-3700) "in"»
+  «wire (-1200,-3900) (-1200,-3700) "in"»
+  «wire (2800,-3700) (2500,-3700) "out_deadb"»
   «text (-6100,800) 1 7 0 0x1000000 -1 -1 "ï»¿.tran 3"»
   «text (-7850,-250) 1 7 0 0x1000000 -1 -1 "ï»¿.plot tran V(in) V(out1) V(out2) V(out_limit) V(out_mid)\n.plot tran V(out_cos) V(out_sin) V(out_acos) V(out_abs) \n.plot tran V(out_exp) V(out_ln) V(out_log10) \n.plot tran V(out_pow) V(out_pwr) V(out_pwrs)\n.plot tran V(out_exp) V(out_floor) V(out_ceil) V(out_int) V(out_round)\n.plot tran V(in) V(out_idt) V(out_idt2) V(out_ddt)\n.plot tran V(out_hypot) V(out_random)\n.plot tran V(out_if) V(out_sgn)\n.plot tran V(out_max) V(out_min)\n.plot tran V(out_sinh) V(out_cosh) V(out_sqrt) V(out_tan) V(out_tanh)\n.plot tran V(out_uramp) V(out_ustep)"»
 »
