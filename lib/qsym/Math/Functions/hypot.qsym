@@ -1,6 +1,6 @@
 ÿØÿÛ«symbol hypot
   «type: X»
-  «description: Machine generated symbol for HYPOT»
+  «description: hypot(x,y): sqrt(x**2 + y**2).»
   «library file: |.subckt hypot v x y\nB1 v 0 V=hypot(V(x),V(y))\n.ends hypot»
   «shorted pins: false»
   «line (-400,0) (-250,0) 0 0 0x1000000 -1 -1»
