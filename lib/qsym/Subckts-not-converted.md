@@ -5,4 +5,3 @@ Subckts not converted
 2. PulseModulations/RisingEdgeDetector
 3. PulseModulations/FallingEdgeDetector
 4. PulseModulations/BothEdgesDetector
-5. Discrete/
