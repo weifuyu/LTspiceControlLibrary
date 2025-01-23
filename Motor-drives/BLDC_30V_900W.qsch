@@ -2133,13 +2133,13 @@
   «text (6950,1550) 1 7 1 0x1000000 -1 -1 "ï»¿Analogy between\nElectric Circuit - Rotating Machinery\n \nQ: charge - Pm: angle\nI: current - Om: angular velocity\nV: Voltage - Tm: torque\nR: Resistance - Dm: viscous resistance\nL: Inductance - Jm: moment of inertia\nC: Capacitance - Km: torsion coefficient"»
   «text (-800,1950) 2 7 1 0x1000000 -1 -1 "ï»¿Circuit"»
   «text (-800,3150) 2 7 1 0x1000000 -1 -1 "ï»¿Config"»
-  «text (-700,2550) 1 7 0 0x1000000 -1 -1 "ï»¿.tran 0 300m 1m startup uic\n.model SW SW Ron=10m Roff=1Meg Vt=0.5 Vh=0.1\n.model D D Ron=3m Roff=1Meg Vfwd=0.4"»
+  «text (-700,2550) 1 7 0 0x1000000 -1 -1 "ï»¿.tran 0 401m 1m startup uic\n.model SW SW Ron=10m Roff=1Meg Vt=0.5 Vh=0.1\n.model D D Ron=3m Roff=1Meg Vfwd=0.4"»
   «text (-2050,-200) 1 7 0 0x1000000 -1 -1 "ï»¿.param Vdc=30"»
   «text (12450,-9050) 1 7 0 0x1000000 -1 -1 "ï»¿.param fsw=38K\n.param per=1/fsw"»
   «text (250,-12100) 1 7 0 0x1000000 -1 -1 "ï»¿.func mod(x, base) x-floor(x/base)*base"»
   «text (4450,2600) 1 7 0 0x1000000 -1 -1 "ï»¿.plot tran V(om*) V(om)\n.plot tran V(pe_mod)\n.plot V(iq*) V(iq)\n.plot V(id*) V(id) \n.plot V(uff_d) V(uff_q) \n.plot V(tm*) V(dbg_om)\n.plot V(tm)\n.plot V(vd*) V(vq*)\n.plot V(mu*) V(mv*) V(mw*) \n.plot tran V(IU) V(IV) V(IW)"»
-  «text (4500,3600) 2 7 1 0x1000000 -1 -1 "ï»¿Plot"»
-  «text (5250,-13450) 1 7 0 0x1000000 -1 -1 "ï»¿.param Kp_curr = 0.35\n.param Ti_curr = 5m\n.param phi_f = 1.6m ; unit Vs"»
+  «text (4500,3800) 2 7 1 0x1000000 -1 -1 "ï»¿Plot"»
+  «text (5250,-13450) 1 7 0 0x1000000 -1 -1 "ï»¿.param Kp_curr = 0.05\n.param Ti_curr = 1m\n.param phi_f = 1.3m ; unit Vs"»
   «text (-2750,-20950) 1 7 0 0x1000000 -1 -1 "ï»¿.param fclk = 1K\n.param Kp_om=0.85\n.param Ti_speed = 50m\n.param Kp_aw_speed=Kp_om/fclk/Ti_speed"»
   «text (5350,-17250) 1 7 0 0x1000000 -1 -1 "ï»¿.param kt=0.001391"»
 »
