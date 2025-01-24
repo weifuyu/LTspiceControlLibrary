@@ -2140,7 +2140,7 @@
   «text (4450,2600) 1 7 0 0x1000000 -1 -1 "ï»¿.plot tran V(om*) V(om)\n.plot tran V(pe_mod)\n.plot V(iq*) V(iq)\n.plot V(id*) V(id) \n.plot V(uff_d) V(uff_q) \n.plot V(tm*) V(dbg_om)\n.plot V(tm)\n.plot V(vd*) V(vq*)\n.plot V(mu*) V(mv*) V(mw*) \n.plot tran V(IU) V(IV) V(IW)"»
   «text (4500,3800) 2 7 1 0x1000000 -1 -1 "ï»¿Plot"»
   «text (5250,-13450) 1 7 0 0x1000000 -1 -1 "ï»¿.param Kp_curr = 0.05\n.param Ti_curr = 1m\n.param phi_f = 1.3m ; unit Vs"»
-  «text (-2750,-20950) 1 7 0 0x1000000 -1 -1 "ï»¿.param fclk = 1K\n.param Kp_om=0.85\n.param Ti_speed = 50m\n.param Kp_aw_speed=Kp_om/fclk/Ti_speed"»
+  «text (-2750,-20950) 1 7 0 0x1000000 -1 -1 "ï»¿.param fclk = 1K\n.param Kp_om=0.5\n.param Ti_speed = 50m\n.param Kp_aw_speed=Kp_om/fclk/Ti_speed"»
   «text (5350,-17250) 1 7 0 0x1000000 -1 -1 "ï»¿.param kt=0.001391"»
 »
 
